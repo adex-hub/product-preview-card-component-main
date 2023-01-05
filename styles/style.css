@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(30deg, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  height: 550px;
+  width: 700px;
+  color: hsl(212deg, 21%, 14%);
+}
+main .main-img {
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  padding: 0;
+  border-radius: 10px 0 0 10px;
+}
+main .main-img-m {
+  display: none;
+}
+main .description {
+  background: hsl(0deg, 0%, 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 50px 0 40px;
+  font-family: "Montserrat";
+  line-height: 25px;
+  border-radius: 0 10px 10px 0;
+}
+main .description h4 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  width: 100%;
+  color: hsl(228deg, 12%, 48%);
+  letter-spacing: 0.4ch;
+}
+main .description h1 {
+  font-family: "Fraunces";
+  line-height: 35px;
+  padding: 23px 0;
+  font-size: 35px;
+}
+main .description p {
+  margin: 10px 0;
+  color: hsl(228deg, 12%, 48%);
+  font-size: 15px;
+}
+main .description .prices {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+main .description .prices .actual-price {
+  font-family: "Fraunces";
+  font-size: 40px;
+  color: hsl(158deg, 36%, 37%);
+}
+main .description .prices .slashed-price {
+  text-decoration: line-through;
+  color: hsl(228deg, 12%, 48%);
+}
+main .description button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background: hsl(158deg, 36%, 37%);
+  border: hsl(158deg, 36%, 37%);
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Montserrat";
+  padding: 0 70px;
+  font-weight: 800;
+  transition: 0.2s;
+  cursor: pointer;
+}
+main .description button:hover {
+  background: #08443a;
+}
+
+@media (max-width: 730px) {
+  body {
+    padding-bottom: 20%;
+  }
+  main {
+    flex-direction: column;
+    width: 335px;
+  }
+  main .main-img {
+    display: none;
+  }
+  main .main-img-m {
+    display: initial;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  main .description {
+    border-radius: 0px;
+    padding: 0 22px;
+    border-radius: 0 0 10px 10px;
+  }
+  main .description h4 {
+    padding: 15px 0;
+  }
+  main .description h1 {
+    padding: 0;
+  }
+  main .description p {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  main .description .prices {
+    margin: 15px 0;
+    padding: 0 55px 0 0;
+  }
+  main .description button {
+    margin: 15px 0;
+    padding: 0 93px;
+  }
+}/*# sourceMappingURL=style.css.map */

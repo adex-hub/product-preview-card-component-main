@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// - Very dark blue: hsl(212, 21%, 14%)
+// - Dark grayish blue: hsl(228, 12%, 48%)
+// - White: hsl(0, 0%, 100%)
+// - Dark cyan: hsl(158, 36%, 37%)
+// - Cream: hsl(30, 38%, 92%)
+
+//Colors
+$cream: hsl(30, 38%, 92%);
+$d-cyan: hsl(158, 36%, 37%);
+$white: hsl(0, 0%, 100%);
+$dark-blue: hsl(212, 21%, 14%);
+$dark-grayblue: hsl(228, 12%, 48%);
+
+//Actual Code
+body {
+  background: $cream;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  display: flex;
+  height: 550px;
+  width: 700px;
+  color: $dark-blue;
+  .main-img {
+    width: 100%;
+    object-fit: scale-down;
+    object-position: 50% 50%;
+    padding: 0;
+    border-radius: 10px 0 0 10px;
+  }
+  .main-img-m{
+    display: none;
+  }
+  .description {
+    background: $white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 50px 0 40px;
+    font-family: "Montserrat";
+    line-height: 25px;
+    border-radius: 0 10px 10px 0;
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+      // padding: 0 0 15px 0;
+      width: 100%;
+      color: $dark-grayblue;
+      letter-spacing: .4ch;
+    }
+    h1 {
+      font-family: "Fraunces";
+      line-height: 35px;
+      padding: 23px 0;
+      font-size: 35px;
+      // margin: 0 0 20px 0;
+    }
+    p {
+      margin: 10px 0;
+      color: $dark-grayblue;
+      font-size: 15px;
+    }
+    .prices {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 50px 0;
+      .actual-price {
+        font-family: "Fraunces";
+        font-size: 40px;
+        color: $d-cyan;
+      }
+      .slashed-price {
+        text-decoration: line-through;
+        color: $dark-grayblue;
+      }
+    }
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        background: $d-cyan;
+        border: $d-cyan;
+        border-radius: 10px;
+        color: $white;
+        font-family: "Montserrat";
+        padding: 0 70px;
+        font-weight: 800;
+        transition: .2s;
+        cursor: pointer;
+    }
+    button:hover{
+      background: #08443a; //#32372b
+    }
+  }
+}
+
+// Mobile version
+@media (max-width: 730px){
+  body{
+    padding-bottom: 20%;
+  }
+  main{
+    flex-direction: column;
+    width: 335px;
+    .main-img{
+      display: none;
+    }
+    .main-img-m{
+      display: initial;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .description{
+      border-radius: 0px;
+      padding: 0 22px;
+      border-radius: 0 0 10px 10px;
+      h4{
+        padding: 15px 0;
+      }
+      h1{
+        padding: 0;
+      }
+      p{
+        margin: 15px 0;
+        font-size: 14px;
+      }
+      .prices{
+        margin: 15px 0;
+        padding: 0 55px 0 0;
+      }
+      button{
+        margin: 15px 0;
+        padding: 0 93px;
+      }
+    }
+  }
+}
