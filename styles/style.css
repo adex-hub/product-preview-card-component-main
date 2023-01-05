@@ -19,9 +19,9 @@ main {
   color: hsl(212deg, 21%, 14%);
 }
 main .main-img {
-  width: 100%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
   padding: 0;
@@ -40,11 +40,12 @@ main .description {
   font-family: "Montserrat";
   line-height: 25px;
   border-radius: 0 10px 10px 0;
+  width: 50%;
+  font-weight: 500;
 }
-main .description h4 {
+main .description .heading {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-weight: 400;
   width: 100%;
   color: hsl(228deg, 12%, 48%);
   letter-spacing: 0.4ch;
@@ -64,7 +65,8 @@ main .description .prices {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 50px 0;
+  margin: 40px 0;
+  padding: 0 28px 0 0;
 }
 main .description .prices .actual-price {
   font-family: "Fraunces";
