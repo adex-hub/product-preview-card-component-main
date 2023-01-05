@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 main {
@@ -98,9 +98,6 @@ main .description button:hover {
 }
 
 @media (max-width: 730px) {
-  body {
-    padding-bottom: 20%;
-  }
   main {
     flex-direction: column;
     width: 335px;

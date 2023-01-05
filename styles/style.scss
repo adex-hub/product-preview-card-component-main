@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 main {
   display: flex;
@@ -111,9 +111,6 @@ main {
 
 // Mobile version
 @media (max-width: 730px){
-  body{
-    padding-bottom: 20%;
-  }
   main{
     flex-direction: column;
     width: 335px;
